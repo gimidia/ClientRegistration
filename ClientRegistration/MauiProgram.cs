@@ -33,7 +33,7 @@ namespace ClientRegistration
                 });
 
             // Registrar serviços
-            builder.Services.AddSingleton<ClientDatabase>();
+            builder.Services.AddSingleton<IClientDatabase, ClientDatabase>();
             builder.Services.AddSingleton<IClientService, ClientService>();
 
             // Registrar ViewModels

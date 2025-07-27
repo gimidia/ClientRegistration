@@ -70,12 +70,73 @@ Antes de começar, garanta que você tenha o seguinte ambiente de desenvolviment
     ```
     *Você pode encontrar os frameworks de destino disponíveis no arquivo `ClientRegistration.csproj`.*
 
+## Testes Unitários
+
+O projeto inclui uma suíte abrangente de testes unitários para garantir a qualidade e o funcionamento correto das funcionalidades principais.
+
+### Cobertura de Testes
+
+Os testes cobrem todas as operações CRUD do serviço de clientes:
+
+- **Listagem de clientes**
+- **Busca por ID**
+- **Cadastro de novos clientes**
+- **Atualização de clientes existentes**
+- **Exclusão de clientes**
+
+### Como Executar os Testes
+
+#### Usando o Terminal
+
+1. Navegue até a pasta raiz do projeto:
+   ```bash
+   cd ClientRegistration
+   ```
+
+2. Execute o comando para rodar os testes:
+   ```bash
+   dotnet test
+   ```
+
+#### Usando o Visual Studio 2022
+
+1. Abra o **Test Explorer** (Menu **Test** > **Test Explorer**)
+2. Clique em **Run All Tests** para executar todos os testes
+
+#### Usando o Visual Studio Code
+
+1. Instale a extensão **.NET Core Test Explorer**
+2. Abra a aba de Testes na barra lateral
+3. Clique no ícone de play para executar todos os testes
+
+### Estrutura dos Testes
+
+Os testes estão organizados no projeto `ClientRegistration.Tests` e seguem o padrão Arrange-Act-Assert (Preparar-Agir-Verificar).
+
+Exemplo de um caso de teste:
+
+```csharp
+[Fact]
+public async Task AddClientAsync_ShouldSaveClient_WhenClientIsValid()
+{
+    // Arrange
+    var client = new Client { Name = "Fulano", Lastname = "de tal", Age = 20, Address = "Rua das Flores 99" };
+    
+    // Act
+    var result = await _clientService.AddClientAsync(client);
+    
+    // Assert
+    Assert.Equal(1, result);
+}
+```
+
 ## Estrutura do Projeto
 
 - `Models/`: Contém as classes de modelo (ex: `Client`).
 - `ViewModels/`: Contém os ViewModels que gerenciam a lógica da interface.
 - `Views/`: Contém as páginas XAML da aplicação.
 - `Services/`: Contém os serviços, como o de acesso ao banco de dados (`ClientService`).
+- `Tests/`: Contém os testes unitários do projeto.
 - `App.xaml.cs`: Ponto de entrada da aplicação.
 - `MauiProgram.cs`: Configuração inicial da aplicação e injeção de dependência.
 

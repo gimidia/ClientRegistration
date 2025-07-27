@@ -4,7 +4,7 @@ using System.Diagnostics;
 
 namespace ClientRegistration.Services
 {
-    public class ClientDatabase
+    public class ClientDatabase : IClientDatabase
     {
         private readonly SQLiteAsyncConnection _database;
         private const string DB_NAME = "clients.db3";

@@ -5,9 +5,9 @@ namespace ClientRegistration.Services
 {
     public class ClientService : IClientService
     {
-        private readonly ClientDatabase _database;
+        private readonly IClientDatabase _database;
 
-        public ClientService(ClientDatabase database)
+        public ClientService(IClientDatabase database)
         {
             _database = database;
         }
