@@ -48,15 +48,19 @@ Antes de começar, garanta que você tenha o seguinte ambiente de desenvolviment
 1.  Clone o repositório para sua máquina local.
 2.  Abra a pasta raiz do projeto (`ClientRegistration`) no Visual Studio Code.
 3.  Abra um novo terminal no VS Code (**Terminal > New Terminal**).
-4.  Restaure as dependências do projeto executando o comando:
+4.  Navegue até o diretório do projeto:
+    ```bash
+    cd ClientRegistration
+    ```
+5.  Restaure as dependências do projeto executando o comando:
     ```bash
     dotnet restore
     ```
-5.  Compile o projeto:
+6.  Compile o projeto:
     ```bash
     dotnet build
     ```
-6.  Execute a aplicação para a plataforma desejada. Por exemplo, para Windows:
+7.  Execute a aplicação para a plataforma desejada. Por exemplo, para Windows:
     ```bash
     dotnet build -t:Run -f net9.0-windows10.0.19041.0
     ```
@@ -64,10 +68,10 @@ Antes de começar, garanta que você tenha o seguinte ambiente de desenvolviment
 
 ## Estrutura do Projeto
 
-- `Models/`: Contém as classes de modelo (ex: `Cliente`).
+- `Models/`: Contém as classes de modelo (ex: `Client`).
 - `ViewModels/`: Contém os ViewModels que gerenciam a lógica da interface.
 - `Views/`: Contém as páginas XAML da aplicação.
-- `Services/`: Contém os serviços, como o de acesso ao banco de dados (`ClienteService`).
+- `Services/`: Contém os serviços, como o de acesso ao banco de dados (`ClientService`).
 - `App.xaml.cs`: Ponto de entrada da aplicação.
 - `MauiProgram.cs`: Configuração inicial da aplicação e injeção de dependência.
 
