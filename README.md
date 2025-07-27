@@ -88,14 +88,19 @@ Os testes cobrem todas as operações CRUD do serviço de clientes:
 
 #### Usando o Terminal
 
-1. Navegue até a pasta raiz do projeto:
+1. Navegue até a pasta do projeto de testes:
    ```bash
-   cd ClientRegistration
+   cd ClientRegistration.Tests
    ```
 
 2. Execute o comando para rodar os testes:
    ```bash
    dotnet test
+   ```
+   
+   *Ou, a partir da pasta raiz do projeto, você pode executar:*
+   ```bash
+   dotnet test ClientRegistration.Tests/ClientRegistration.Tests.csproj
    ```
 
 #### Usando o Visual Studio 2022
