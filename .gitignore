@@ -1,0 +1,72 @@
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# Visual Studio 
+.vs/
+
+# Rider
+.idea/
+*.sln.iml
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Logs
+*.log
+
+# NuGet
+*.nupkg
+packages/
+.nuget/
+
+# Xamarin/MAUI
+*.apk
+*.apks
+*.aab
+*.ipa
+*.app
+*.xcuserstate
+*.xcworkspace
+*.xcuserdata/
+*.xcodeproj/
+*.plist
+*.pdb
+*.dll
+*.exe
+*.cache
+*.db
+*.db-shm
+*.db-wal
+
+# Others
+*.vspscc
+*.vssscc
+*.orig
+*.rej
+*.bak
+*.swp
+*.tmp
+*.pid
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.VC.opendb
+
+# Test results
+TestResults/
+
+# Local configuration
+launchSettings.json 
