@@ -52,15 +52,19 @@ Antes de começar, garanta que você tenha o seguinte ambiente de desenvolviment
     ```bash
     cd ClientRegistration
     ```
-5.  Restaure as dependências do projeto executando o comando:
+5.  Limpe o projeto para remover artefatos de compilações anteriores (Opcional, mas recomendado):
+    ```bash
+    dotnet clean
+    ```
+6.  Restaure as dependências do projeto executando o comando:
     ```bash
     dotnet restore
     ```
-6.  Compile o projeto:
+7.  Compile o projeto:
     ```bash
     dotnet build
     ```
-7.  Execute a aplicação para a plataforma desejada. Por exemplo, para Windows:
+8.  Execute a aplicação para a plataforma desejada. Por exemplo, para Windows:
     ```bash
     dotnet build -t:Run -f net9.0-windows10.0.19041.0
     ```
